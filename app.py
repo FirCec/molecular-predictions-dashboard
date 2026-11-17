@@ -41,7 +41,7 @@ COLUMN_NAMES = {
 # The cache makes it read the CSV only once and reuse the result afterwards.
 @st.cache_data
 def load_data(path: Path) -> pd.DataFrame:
-    """Read the ESOL CSV file and rename its columns."""
+    """Read the ESOL CSV file, rename its columns and add the ESOL error."""
     df = pd.read_csv(path)
     df = df.rename(columns=COLUMN_NAMES)
     # Error of the ESOL formula for each molecule: predicted minus measured.
