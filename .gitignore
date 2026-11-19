@@ -13,3 +13,5 @@ __pycache__/
 
 # Vs Code settings
 .vscode/
+
+playground.py
